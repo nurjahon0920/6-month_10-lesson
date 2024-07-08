@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -17,10 +17,18 @@ const Footer = () => {
           </div>
           <div className="footer2 flex flex-col mr-[144px]">
             <p className="p">Links</p>
-            <Link className="L">Home</Link>
-            <Link className="L">Shop</Link>
-            <Link className="L">About</Link>
-            <Link className="L">Contact</Link>
+            <NavLink to="/" className="L">
+              Home
+            </NavLink>
+            <NavLink to="/shop" className="L">
+              Shop
+            </NavLink>
+            <NavLink to="/about" className="L">
+              About
+            </NavLink>
+            <NavLink to="/contact" className="L">
+              Contact
+            </NavLink>
           </div>
           <div className="footer3 flex flex-col mr-[72px]">
             <p className="p">Help</p>
@@ -33,13 +41,18 @@ const Footer = () => {
             <div className="flex justify-between w-[286px]">
               <input
                 type="email"
-                className="input w-[200px] text-[14px] border-none outline-none"
+                className="input w-[200px] text-[14px] outline-none pb-[3px] border-b-2 border-solid border-[#000000] "
                 placeholder="Enter Your Email Address"
               />
-              <h4 className="font-bold cursor-pointer">SUBSCRIBE</h4>
+              <h4 className="font-bold cursor-pointer pb-[3px] border-b-2 border-solid border-[#000000]">
+                SUBSCRIBE
+              </h4>
             </div>
           </div>
         </div>
+        <p className="mb-9 text-base font-medium">
+          2023 furino. All rights reverved
+        </p>
       </div>
     </footer>
   );

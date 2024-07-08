@@ -1,4 +1,10 @@
 import { Link, NavLink } from "react-router-dom";
+
+import account_svg from "../assets/header/account_svg.svg";
+import heart_svg from "../assets/header/heart_svg.svg";
+import search_svg from "../assets/header/search_svg.svg";
+import shopping_svg from "../assets/header/shopping_svg.svg";
+
 import "../App.scss";
 
 const Header = () => {
@@ -10,7 +16,7 @@ const Header = () => {
         <Link>
           <img src="/LOGO.svg" alt="" />
         </Link>
-        <div className="flex " style={{ gap: "75px", marginLeft: "108px" }}>
+        <div className="flex" style={{ gap: "75px", marginLeft: "108px" }}>
           <NavLink to="/">Home</NavLink>
           <NavLink to="/shop">Shop</NavLink>
           <NavLink to="/about">About</NavLink>
@@ -18,16 +24,16 @@ const Header = () => {
         </div>
         <div className="flex" style={{ gap: "45px" }}>
           <Link to="">
-            <img src="./src/assets/header/account_svg.svg" alt="" />
+            <img src={account_svg} alt="" />
           </Link>
           <Link to="">
-            <img src="./src/assets/header/heart_svg.svg" alt="" />
+            <img src={heart_svg} alt="" />
           </Link>
           <Link to="">
-            <img src="./src/assets/header/search_svg.svg" alt="" />
+            <img src={search_svg} alt="" />
           </Link>
           <Link to="">
-            <img src="./src/assets/header/shopping_svg.svg" alt="" />
+            <img src={shopping_svg} alt="" />
           </Link>
         </div>
       </div>

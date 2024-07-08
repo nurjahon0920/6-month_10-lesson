@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Shop = () => {
   const [data, setData] = useState([]);
@@ -34,12 +35,33 @@ const Shop = () => {
   ));
   return (
     <div>
-      <div className="container mx-auto p-5 ">
-        <div className=" items-center"></div>
-        <div className="flex flex-wrap gap-8 justify-center mb-10">{links}</div>
-        <div className="flex flex-wrap gap-8 justify-center mb-10">{links}</div>
-        <div className="flex flex-wrap gap-8 justify-center mb-10">{links}</div>
-        <div className="flex flex-wrap gap-8 justify-center mb-10">{links}</div>
+      <div className="container mx-auto p-5 text-center">
+        <div className="shop_top w-full h-80">
+          <h1 className="text-5xl font-bold text-[#000000]">Shop</h1>
+          <div className="flex justify-center mt-3 text-base">
+            <Link to="/" className="text-base font-medium">
+              Home
+            </Link>
+            <p className="text-base font-semibold px-3">{">"}</p>
+            <Link to="/shop" className="font-normal text-base">
+              Shop
+            </Link>
+          </div>
+        </div>
+        <div className=" items-center">
+          <div className="flex flex-wrap gap-8 justify-center mb-10">
+            {links}
+          </div>
+          <div className="flex flex-wrap gap-8 justify-center mb-10">
+            {links}
+          </div>
+          <div className="flex flex-wrap gap-8 justify-center mb-10">
+            {links}
+          </div>
+          <div className="flex flex-wrap gap-8 justify-center mb-10">
+            {links}
+          </div>
+        </div>
       </div>
     </div>
   );
